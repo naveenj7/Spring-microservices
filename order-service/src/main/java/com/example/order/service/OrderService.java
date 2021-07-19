@@ -10,6 +10,8 @@ import com.example.order.dto.ResponseDto;
 import com.example.order.entity.Order;
 import com.example.order.repo.OrderRpeo;
 
+import javassist.NotFoundException;
+
 @Service
 public class OrderService {
 
@@ -39,6 +41,5 @@ public class OrderService {
 	}
 
 	public Order findById(int id) {
-		return orderRpeo.findById(id).orElseThrow();
-	}
+		return orderRpeo.findById(id).orElseThrow();	}
 }
